@@ -13,28 +13,23 @@
     *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f0f2f5;min-height:100vh;overscroll-behavior:none}
 
-    /* ── Header ── */
     .header{background:linear-gradient(135deg,#1565c0,#1976d2);color:#fff;padding:14px 20px 12px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2)}
     .header-row{display:flex;justify-content:space-between;align-items:center}
-    .header h1{font-size:19px;font-weight:700;letter-spacing:.3px}
+    .header h1{font-size:19px;font-weight:700}
     .header .sub{font-size:12px;opacity:.75;margin-top:2px}
-    .km-pill{background:rgba(255,255,255,.2);backdrop-filter:blur(4px);padding:5px 14px;border-radius:20px;font-size:13px;font-weight:700;white-space:nowrap}
+    .km-pill{background:rgba(255,255,255,.2);padding:5px 14px;border-radius:20px;font-size:13px;font-weight:700;white-space:nowrap}
 
-    /* ── Bottom nav ── */
     .nav{display:flex;background:#fff;border-top:1px solid #e0e0e0;position:fixed;bottom:0;width:100%;z-index:100;box-shadow:0 -2px 10px rgba(0,0,0,.08)}
     .nav-btn{flex:1;padding:9px 2px 11px;display:flex;flex-direction:column;align-items:center;gap:3px;border:none;background:none;cursor:pointer;color:#9e9e9e;font-size:10.5px;font-weight:500}
     .nav-btn.active{color:#1565c0}
     .nav-btn .ico{font-size:22px;line-height:1}
 
-    /* ── Page layout ── */
     .page{display:none;padding:14px 14px 86px}
     .page.active{display:block}
 
-    /* ── Cards ── */
     .card{background:#fff;border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 1px 5px rgba(0,0,0,.07)}
     .card-title{font-size:11.5px;font-weight:700;color:#9e9e9e;text-transform:uppercase;letter-spacing:.7px;margin-bottom:13px}
 
-    /* ── Service status ── */
     .svc-item{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid #f5f5f5}
     .svc-item:last-child{border-bottom:none}
     .svc-name{font-size:14px;font-weight:500;color:#212121}
@@ -44,57 +39,51 @@
     .badge.soon{background:#fff8e1;color:#e65100}
     .badge.due{background:#ffebee;color:#b71c1c}
 
-    /* ── Recent entries ── */
     .entry{display:flex;justify-content:space-between;align-items:flex-start;padding:11px 0;border-bottom:1px solid #f5f5f5}
     .entry:last-child{border-bottom:none}
     .entry-name{font-size:13.5px;font-weight:500;color:#212121}
     .entry-meta{font-size:11.5px;color:#9e9e9e;margin-top:2px}
     .entry-cost{font-size:14px;font-weight:700;color:#1565c0;white-space:nowrap;margin-left:8px;padding-top:1px}
 
-    /* ── Forms ── */
     .form-group{margin-bottom:14px}
     label{display:block;font-size:12.5px;font-weight:600;color:#616161;margin-bottom:5px}
-    input,select,textarea{width:100%;padding:12px 13px;border:1.5px solid #e0e0e0;border-radius:9px;font-size:16px;background:#fafafa;color:#212121;-webkit-appearance:none;transition:border-color .2s}
+    input,select{width:100%;padding:12px 13px;border:1.5px solid #e0e0e0;border-radius:9px;font-size:16px;background:#fafafa;color:#212121;-webkit-appearance:none;transition:border-color .2s}
     input:focus,select:focus{outline:none;border-color:#1565c0;background:#fff}
-    input[readonly]{background:#f5f5f5;color:#9e9e9e;border-color:#eeeeee}
+    input[readonly]{background:#f5f5f5;color:#9e9e9e;border-color:#eee}
     .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
-    /* ── Buttons ── */
     .btn{width:100%;padding:14px;border-radius:11px;font-size:15px;font-weight:700;border:none;cursor:pointer;transition:opacity .15s}
     .btn:active{opacity:.8}
     .btn-primary{background:linear-gradient(135deg,#1565c0,#1976d2);color:#fff;box-shadow:0 3px 10px rgba(21,101,192,.3)}
     .btn-outline{background:#fff;color:#1565c0;border:1.5px solid #1565c0;font-size:14px;padding:11px}
 
-    /* ── Login / Setup ── */
-    .fullscreen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:40px 24px;text-align:center;background:#f0f2f5}
-    .big-icon{font-size:80px;margin-bottom:20px}
-    .fullscreen h2{font-size:27px;font-weight:800;color:#1565c0;margin-bottom:8px}
-    .fullscreen p{font-size:14.5px;color:#757575;line-height:1.6;margin-bottom:36px;max-width:320px}
+    /* Setup screen */
+    #screenSetup{min-height:100vh;background:#f0f2f5;display:none}
+    .setup-header{background:linear-gradient(135deg,#1565c0,#1976d2);color:#fff;padding:24px 20px 20px}
+    .setup-header h1{font-size:24px;font-weight:800}
+    .setup-header p{font-size:13px;opacity:.8;margin-top:6px;line-height:1.5}
+    .step{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #f0f0f0}
+    .step:last-child{border-bottom:none}
+    .step-num{width:26px;height:26px;min-width:26px;background:#1565c0;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-top:1px}
+    .step-body{font-size:13.5px;color:#424242;line-height:1.6}
+    .step-body strong{color:#1565c0}
+    .mono{font-family:monospace;background:#e3f2fd;padding:1px 5px;border-radius:4px;font-size:12.5px;color:#0d47a1}
 
-    /* ── Setup steps ── */
-    .step{background:#e3f2fd;border-left:3px solid #1565c0;border-radius:0 8px 8px 0;padding:11px 13px;margin-bottom:8px}
-    .step-n{font-size:11px;font-weight:800;color:#1565c0;margin-bottom:3px;text-transform:uppercase}
-    .step-t{font-size:13px;color:#212121;line-height:1.5}
-
-    /* ── Sync bar ── */
     .sync-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:2px}
     .sync-info{display:flex;align-items:center;gap:6px;font-size:12px;color:#9e9e9e}
     .dot{width:8px;height:8px;border-radius:50%;background:#ccc;flex-shrink:0}
     .dot.ok{background:#4caf50}
     .dot.err{background:#f44336}
-    .dot.syncing{background:#ffa726;animation:pulse .8s infinite}
-    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+    .dot.spin-dot{background:#ffa726;animation:pulse .8s infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
-    /* ── Toast ── */
-    .toast{position:fixed;bottom:86px;left:50%;transform:translateX(-50%) translateY(10px);background:#323232;color:#fff;padding:11px 22px;border-radius:9px;font-size:13.5px;font-weight:500;z-index:300;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.25)}
+    .toast{position:fixed;bottom:86px;left:50%;transform:translateX(-50%) translateY(10px);background:#323232;color:#fff;padding:11px 22px;border-radius:9px;font-size:13.5px;font-weight:500;z-index:300;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.25);max-width:90vw;white-space:normal;text-align:center}
     .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-    /* ── Spinner ── */
     .loader{display:flex;align-items:center;justify-content:center;gap:10px;padding:24px;color:#9e9e9e;font-size:13px}
     .spin{width:20px;height:20px;border:2.5px solid #e0e0e0;border-top-color:#1565c0;border-radius:50%;animation:sp .7s linear infinite;flex-shrink:0}
     @keyframes sp{to{transform:rotate(360deg)}}
 
-    /* ── Settings ── */
     .setting-row{padding:13px 0;border-bottom:1px solid #f5f5f5}
     .setting-row:last-child{border-bottom:none}
     .setting-label{font-size:14px;font-weight:600;color:#212121}
@@ -103,349 +92,210 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════ LOGIN ═══ -->
-<div id="screenLogin" class="fullscreen" style="display:none">
-  <div class="big-icon">🚗</div>
-  <h2>Teana Tracker</h2>
-  <p>Track fuel, maintenance & repairs for your Nissan Teana. Your data lives in your own OneDrive.</p>
-  <button class="btn btn-primary" style="max-width:280px;margin-bottom:14px" onclick="signIn()">
-    Sign in with Microsoft
-  </button>
-  <p style="font-size:12px;color:#bdbdbd">Data is stored in your OneDrive Excel file</p>
-</div>
-
-<!-- ══════════════════════════════════════════════════════ SETUP ════ -->
-<div id="screenSetup" style="display:none;background:#f0f2f5;min-height:100vh">
-  <div style="background:linear-gradient(135deg,#1565c0,#1976d2);color:#fff;padding:18px 20px 16px">
-    <h1 style="font-size:20px;font-weight:800">⚙️ First-time Setup</h1>
-    <p style="font-size:13px;opacity:.8;margin-top:4px">One-time configuration · Takes ~5 minutes</p>
+<!-- ══════════════════════════════════════════════════════════ SETUP ═══ -->
+<div id="screenSetup">
+  <div class="setup-header">
+    <h1>🚗 Teana Tracker</h1>
+    <p>Connect to Google Sheets in 3 steps — no account needed beyond your Gmail.</p>
   </div>
   <div style="padding:14px 14px 40px">
+
+    <!-- Step instructions -->
     <div class="card">
-      <div class="card-title">Enter Your Azure App Client ID</div>
-      <p style="font-size:13px;color:#616161;margin-bottom:14px;line-height:1.5">Follow the steps below to get a free Client ID, then paste it here.</p>
+      <div class="card-title">Step 1 — Create a Google Sheet</div>
+      <div class="step"><div class="step-num">1</div><div class="step-body">Go to <strong>sheets.google.com</strong> and create a new blank spreadsheet.</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body">Name it <strong>Teana Tracker</strong>.</div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body">Copy the Sheet ID from the URL:<br><span class="mono">docs.google.com/spreadsheets/d/<strong>SHEET_ID</strong>/edit</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Step 2 — Set up the Apps Script</div>
+      <div class="step"><div class="step-num">1</div><div class="step-body">In your Google Sheet, click <strong>Extensions → Apps Script</strong>.</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body">Delete all existing code. Paste in the contents of <strong>Code.gs</strong> (in the TeanaTracker folder).</div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body">Replace <span class="mono">PASTE_YOUR_SHEET_ID_HERE</span> with your Sheet ID, and <span class="mono">PASTE_ANY_PASSWORD_HERE</span> with any password you choose (e.g. <span class="mono">teana2025</span>).</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-body">Click <strong>Save</strong> (💾), then click <strong>Run → setup</strong>. Accept permissions when asked. This creates all 4 sheets automatically.</div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-body">Click <strong>Deploy → New deployment</strong>.<br>Type: <strong>Web app</strong><br>Execute as: <strong>Me</strong><br>Who has access: <strong>Anyone</strong><br>Click <strong>Deploy</strong>, then copy the <strong>Web app URL</strong>.</div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Step 3 — Connect the app</div>
       <div class="form-group">
-        <label>Client ID</label>
-        <input type="text" id="clientIdInput" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" style="font-size:14px;font-family:monospace">
+        <label>Apps Script Web App URL</label>
+        <input type="url" id="setupUrl" placeholder="https://script.google.com/macros/s/.../exec" style="font-size:13px">
       </div>
-      <button class="btn btn-primary" onclick="saveClientId()">Save & Sign In</button>
+      <div class="form-group">
+        <label>Your Secret Password</label>
+        <input type="text" id="setupSecret" placeholder="teana2025">
+      </div>
+      <button class="btn btn-primary" onclick="saveSetup()">✅ Save & Connect</button>
     </div>
-    <div class="card">
-      <div class="card-title">How to get your Client ID</div>
-      <div class="step"><div class="step-n">Step 1</div><div class="step-t">Open <strong>portal.azure.com</strong> on your computer and sign in with your Microsoft account.</div></div>
-      <div class="step"><div class="step-n">Step 2</div><div class="step-t">Search <strong>"App registrations"</strong> in the top bar → click <strong>"+ New registration"</strong></div></div>
-      <div class="step"><div class="step-n">Step 3</div><div class="step-t">Name: <strong>Teana Tracker</strong><br>Account type: <strong>Personal Microsoft accounts only</strong><br>Redirect URI type: <strong>Single-page application (SPA)</strong><br>URI value: <strong id="redirectUriDisplay" style="word-break:break-all;color:#1565c0">Loading...</strong></div></div>
-      <div class="step"><div class="step-n">Step 4</div><div class="step-t">Click <strong>Register</strong>, then copy the <strong>Application (client) ID</strong> shown at the top.</div></div>
-      <div class="step"><div class="step-n">Step 5</div><div class="step-t">Go to <strong>API permissions → Add a permission → Microsoft Graph → Delegated permissions</strong><br>Add: <strong>Files.ReadWrite</strong> and <strong>User.Read</strong> → click <strong>Add permissions</strong></div></div>
-      <div class="step"><div class="step-n">Step 6</div><div class="step-t">Paste the Client ID above and tap <strong>Save & Sign In</strong>.</div></div>
-    </div>
+
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════ MAIN APP ═══ -->
+<!-- ═════════════════════════════════════════════════════════ MAIN APP ═══ -->
 <div id="screenMain" style="display:none">
 
-  <!-- Header -->
   <div class="header">
     <div class="header-row">
       <div>
         <h1 id="hTitle">Teana Tracker</h1>
-        <div class="sub" id="hSub">Welcome</div>
+        <div class="sub" id="hSub">Tap sync to load data</div>
       </div>
       <div class="km-pill" id="kmPill">— km</div>
     </div>
   </div>
 
-  <!-- ── Dashboard ── -->
+  <!-- Dashboard -->
   <div id="pageDashboard" class="page active">
     <div class="card">
       <div class="sync-bar">
         <span class="card-title" style="margin-bottom:0">Sync</span>
         <div class="sync-info"><div class="dot" id="syncDot"></div><span id="syncTxt">Not synced</span></div>
       </div>
-      <button class="btn btn-outline" style="margin-top:12px" onclick="syncAll()">🔄 Sync with OneDrive</button>
+      <button class="btn btn-outline" style="margin-top:12px" onclick="syncAll()">🔄 Sync with Google Sheets</button>
     </div>
     <div class="card">
       <div class="card-title">Service Status</div>
-      <div id="svcList"><div class="loader"><div class="spin"></div>Loading…</div></div>
+      <div id="svcList"><div class="loader"><div class="spin"></div>Tap sync to load…</div></div>
     </div>
     <div class="card">
       <div class="card-title">Recent Fuel</div>
       <div id="recentFuel"><div class="loader"><div class="spin"></div></div></div>
     </div>
     <div class="card">
-      <div class="card-title">Recent Service & Repairs</div>
-      <div id="recentService"><div class="loader"><div class="spin"></div></div></div>
+      <div class="card-title">Recent Service &amp; Repairs</div>
+      <div id="recentSvc"><div class="loader"><div class="spin"></div></div></div>
     </div>
   </div>
 
-  <!-- ── Fuel ── -->
+  <!-- Fuel -->
   <div id="pageFuel" class="page">
     <div class="card">
       <div class="card-title">Add Fuel Entry</div>
-      <div class="form-group">
-        <label>Date</label>
-        <input type="date" id="fDate">
-      </div>
+      <div class="form-group"><label>Date</label><input type="date" id="fDate"></div>
       <div class="row2">
-        <div class="form-group">
-          <label>Odometer (km)</label>
-          <input type="number" id="fKM" placeholder="77 000" inputmode="numeric">
-        </div>
-        <div class="form-group">
-          <label>Liters</label>
-          <input type="number" id="fLiters" placeholder="40.5" step="0.01" inputmode="decimal" oninput="calcPPL()">
-        </div>
+        <div class="form-group"><label>Odometer (km)</label><input type="number" id="fKM" placeholder="77000" inputmode="numeric"></div>
+        <div class="form-group"><label>Liters</label><input type="number" id="fLiters" placeholder="40.5" step="0.01" inputmode="decimal" oninput="calcPPL()"></div>
       </div>
-      <div class="form-group">
-        <label>Total Price (฿)</label>
-        <input type="number" id="fPrice" placeholder="1 500" inputmode="numeric" oninput="calcPPL()">
-      </div>
-      <div class="form-group">
-        <label>Price / Liter (auto)</label>
-        <input type="number" id="fPPL" readonly>
-      </div>
+      <div class="form-group"><label>Total Price (฿)</label><input type="number" id="fPrice" placeholder="1500" inputmode="numeric" oninput="calcPPL()"></div>
+      <div class="form-group"><label>Price / Liter (auto)</label><input type="number" id="fPPL" readonly></div>
       <button class="btn btn-primary" onclick="addFuel()">⛽ Save Fuel Entry</button>
     </div>
   </div>
 
-  <!-- ── Maintenance ── -->
+  <!-- Maintenance -->
   <div id="pageMaintenance" class="page">
     <div class="card">
       <div class="card-title">Add Regular Maintenance</div>
-      <div class="form-group">
-        <label>Date</label>
-        <input type="date" id="mDate">
-      </div>
-      <div class="form-group">
-        <label>Odometer (km)</label>
-        <input type="number" id="mKM" placeholder="77 000" inputmode="numeric">
-      </div>
+      <div class="form-group"><label>Date</label><input type="date" id="mDate"></div>
+      <div class="form-group"><label>Odometer (km)</label><input type="number" id="mKM" placeholder="77000" inputmode="numeric"></div>
       <div class="form-group">
         <label>Service Type</label>
-        <select id="mType">
-          <option value="">Select service…</option>
-        </select>
+        <select id="mType"><option value="">Select service…</option></select>
       </div>
-      <div class="form-group">
-        <label>Description / Notes</label>
-        <input type="text" id="mDesc" placeholder="e.g. Castrol 5W-30 4L">
-      </div>
-      <div class="form-group">
-        <label>Cost (฿)</label>
-        <input type="number" id="mCost" placeholder="1 200" inputmode="numeric">
-      </div>
+      <div class="form-group"><label>Description / Notes</label><input type="text" id="mDesc" placeholder="e.g. Castrol 5W-30 4L"></div>
+      <div class="form-group"><label>Cost (฿)</label><input type="number" id="mCost" placeholder="1200" inputmode="numeric"></div>
       <button class="btn btn-primary" onclick="addMaintenance()">🔧 Save Maintenance</button>
     </div>
   </div>
 
-  <!-- ── Repair ── -->
+  <!-- Repair -->
   <div id="pageRepair" class="page">
     <div class="card">
       <div class="card-title">Add Repair</div>
-      <div class="form-group">
-        <label>Date</label>
-        <input type="date" id="rDate">
-      </div>
-      <div class="form-group">
-        <label>Odometer (km)</label>
-        <input type="number" id="rKM" placeholder="77 000" inputmode="numeric">
-      </div>
-      <div class="form-group">
-        <label>Description</label>
-        <input type="text" id="rDesc" placeholder="e.g. Replace front shock absorber">
-      </div>
+      <div class="form-group"><label>Date</label><input type="date" id="rDate"></div>
+      <div class="form-group"><label>Odometer (km)</label><input type="number" id="rKM" placeholder="77000" inputmode="numeric"></div>
+      <div class="form-group"><label>Description</label><input type="text" id="rDesc" placeholder="e.g. Replace front shock absorber"></div>
       <div class="row2">
-        <div class="form-group">
-          <label>Cost (฿)</label>
-          <input type="number" id="rCost" placeholder="3 500" inputmode="numeric">
-        </div>
-        <div class="form-group">
-          <label>Shop</label>
-          <input type="text" id="rShop" placeholder="e.g. Nissan">
-        </div>
+        <div class="form-group"><label>Cost (฿)</label><input type="number" id="rCost" placeholder="3500" inputmode="numeric"></div>
+        <div class="form-group"><label>Shop</label><input type="text" id="rShop" placeholder="e.g. Nissan"></div>
       </div>
       <button class="btn btn-primary" onclick="addRepair()">🛠️ Save Repair</button>
     </div>
   </div>
 
-  <!-- ── Settings ── -->
+  <!-- Settings -->
   <div id="pageSettings" class="page">
     <div class="card">
-      <div class="card-title">Account</div>
+      <div class="card-title">Connection</div>
       <div class="setting-row">
-        <div class="setting-label" id="settingName">—</div>
-        <div class="setting-desc" id="settingEmail">—</div>
+        <div class="setting-label">Apps Script URL</div>
+        <div class="setting-desc" id="settingUrl" style="word-break:break-all">—</div>
       </div>
-      <button class="btn btn-outline" style="margin-top:10px" onclick="signOut()">Sign Out</button>
-    </div>
-    <div class="card">
-      <div class="card-title">OneDrive File Path</div>
-      <p style="font-size:12.5px;color:#9e9e9e;margin-bottom:12px">Path to CarTracking_Teana.xlsx relative to your OneDrive root</p>
-      <div class="form-group" style="margin-bottom:10px">
-        <label>File Path</label>
-        <input type="text" id="pathInput" style="font-size:13px;font-family:monospace">
-      </div>
-      <button class="btn btn-outline" onclick="savePath()">Save Path</button>
+      <button class="btn btn-outline" style="margin-top:10px" onclick="reconnect()">Change Connection</button>
     </div>
     <div class="card">
       <div class="card-title">Service Intervals</div>
       <div id="intervalsList"><p style="font-size:13px;color:#9e9e9e">Sync to load…</p></div>
-      <button class="btn btn-outline" style="margin-top:12px" onclick="syncAll()">Reload from OneDrive</button>
+      <button class="btn btn-outline" style="margin-top:12px" onclick="syncAll()">Reload from Google Sheets</button>
     </div>
     <div class="card" style="text-align:center">
-      <p style="font-size:12px;color:#bdbdbd;line-height:1.7">Teana Tracker v1.0<br>Data stored in your OneDrive Excel</p>
+      <p style="font-size:12px;color:#bdbdbd;line-height:1.8">Teana Tracker v2.0<br>Powered by Google Sheets</p>
     </div>
   </div>
 
-  <!-- Bottom nav -->
   <nav class="nav">
-    <button class="nav-btn active" id="nb-Dashboard" onclick="goTab('Dashboard')"><span class="ico">🏠</span><span>Home</span></button>
-    <button class="nav-btn" id="nb-Fuel"      onclick="goTab('Fuel')"       ><span class="ico">⛽</span><span>Fuel</span></button>
-    <button class="nav-btn" id="nb-Maintenance" onclick="goTab('Maintenance')"><span class="ico">🔧</span><span>Service</span></button>
-    <button class="nav-btn" id="nb-Repair"    onclick="goTab('Repair')"     ><span class="ico">🛠️</span><span>Repair</span></button>
-    <button class="nav-btn" id="nb-Settings"  onclick="goTab('Settings')"   ><span class="ico">⚙️</span><span>Settings</span></button>
+    <button class="nav-btn active" id="nb-Dashboard"   onclick="goTab('Dashboard')"  ><span class="ico">🏠</span><span>Home</span></button>
+    <button class="nav-btn"        id="nb-Fuel"         onclick="goTab('Fuel')"        ><span class="ico">⛽</span><span>Fuel</span></button>
+    <button class="nav-btn"        id="nb-Maintenance"  onclick="goTab('Maintenance')" ><span class="ico">🔧</span><span>Service</span></button>
+    <button class="nav-btn"        id="nb-Repair"       onclick="goTab('Repair')"      ><span class="ico">🛠️</span><span>Repair</span></button>
+    <button class="nav-btn"        id="nb-Settings"     onclick="goTab('Settings')"    ><span class="ico">⚙️</span><span>Settings</span></button>
   </nav>
 </div>
 
-<!-- Toast -->
 <div class="toast" id="toast"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/@azure/msal-browser@3/lib/msal-browser.min.js"></script>
 <script>
 // ═══════════════════════════════════════════════════════════════════════════
-//  CONFIG & STATE
+//  CONFIG
 // ═══════════════════════════════════════════════════════════════════════════
-const GRAPH = 'https://graph.microsoft.com/v1.0';
-const SCOPES = ['Files.ReadWrite', 'User.Read'];
-
-let msal = null, account = null;
-let state = {
-  fuelLog: [], maintLog: [], repairLog: [], intervals: [],
-  currentKM: 0, fileId: null, lastSync: null
-};
-
 function cfg(k, v) {
   if (v !== undefined) localStorage.setItem(k, v);
   return localStorage.getItem(k) || '';
 }
 
-// ═══════════════════════════════════════════════════════════════════════════
-//  MSAL AUTH
-// ═══════════════════════════════════════════════════════════════════════════
-async function initApp() {
-  document.getElementById('redirectUriDisplay').textContent =
-    window.location.origin + window.location.pathname;
-
-  const clientId = cfg('clientId');
-  if (!clientId) { show('Setup'); return; }
-
-  msal = new msal.PublicClientApplication({
-    auth: {
-      clientId,
-      authority: 'https://login.microsoftonline.com/consumers',
-      redirectUri: window.location.origin + window.location.pathname
-    },
-    cache: { cacheLocation: 'localStorage' }
-  });
-  await msal.initialize();
-  try { await msal.handleRedirectPromise(); } catch {}
-
-  const accounts = msal.getAllAccounts();
-  if (accounts.length) { account = accounts[0]; launchApp(); }
-  else show('Login');
-}
-
-async function signIn() {
-  try {
-    const r = await msal.loginPopup({ scopes: SCOPES });
-    account = r.account;
-    launchApp();
-  } catch(e) { toast('Sign-in failed: ' + e.message); }
-}
-
-async function signOut() {
-  await msal.logoutPopup();
-  account = null;
-  show('Login');
-}
-
-async function token() {
-  try {
-    return (await msal.acquireTokenSilent({ scopes: SCOPES, account })).accessToken;
-  } catch {
-    return (await msal.acquireTokenPopup({ scopes: SCOPES })).accessToken;
-  }
-}
-
-function saveClientId() {
-  const id = document.getElementById('clientIdInput').value.trim();
-  if (id.length < 30) { toast('Please enter a valid Client ID'); return; }
-  cfg('clientId', id);
-  initApp();
-}
+let state = {
+  fuelLog: [], maintLog: [], repairLog: [],
+  intervals: [],   // { type, intervalKM, lastKM, gsRow }
+  currentKM: 0,
+  lastSync: null
+};
 
 // ═══════════════════════════════════════════════════════════════════════════
-//  GRAPH API HELPERS
+//  APPS SCRIPT API
 // ═══════════════════════════════════════════════════════════════════════════
-async function gGet(url) {
-  const t = await token();
-  const r = await fetch(GRAPH + url, { headers: { Authorization: 'Bearer ' + t } });
-  if (!r.ok) throw new Error(`GET ${url} → ${r.status}`);
-  return r.json();
+async function gsRead(sheetName) {
+  const url = cfg('scriptUrl');
+  const s   = cfg('secret');
+  const r   = await fetch(`${url}?s=${encodeURIComponent(s)}&action=read&sheet=${encodeURIComponent(sheetName)}`);
+  const j   = await r.json();
+  if (j.error) throw new Error(j.error);
+  return j.data; // 2D array, row 0 = headers
 }
 
-async function gPost(url, body) {
-  const t = await token();
-  const r = await fetch(GRAPH + url, {
+async function gsAppend(sheetName, row) {
+  const url = cfg('scriptUrl');
+  const s   = cfg('secret');
+  const r   = await fetch(url, {
     method: 'POST',
-    headers: { Authorization: 'Bearer ' + t, 'Content-Type': 'application/json' },
-    body: JSON.stringify(body)
+    body: new URLSearchParams({ s, data: JSON.stringify({ action:'append', sheet:sheetName, row }) })
   });
-  if (!r.ok) throw new Error(`POST ${url} → ${r.status}: ${await r.text()}`);
-  return r.json();
+  const j = await r.json();
+  if (j.error) throw new Error(j.error);
+  return j;
 }
 
-async function gPatch(url, body) {
-  const t = await token();
-  const r = await fetch(GRAPH + url, {
-    method: 'PATCH',
-    headers: { Authorization: 'Bearer ' + t, 'Content-Type': 'application/json' },
-    body: JSON.stringify(body)
+async function gsUpdateCell(sheetName, rowNum, colNum, value) {
+  const url = cfg('scriptUrl');
+  const s   = cfg('secret');
+  const r   = await fetch(url, {
+    method: 'POST',
+    body: new URLSearchParams({ s, data: JSON.stringify({ action:'updateCell', sheet:sheetName, row:rowNum, col:colNum, value }) })
   });
-  if (!r.ok) throw new Error(`PATCH ${url} → ${r.status}: ${await r.text()}`);
-  return r.json();
-}
-
-// ═══════════════════════════════════════════════════════════════════════════
-//  EXCEL OPERATIONS
-// ═══════════════════════════════════════════════════════════════════════════
-async function fileId() {
-  if (state.fileId) return state.fileId;
-  const path = cfg('filePath') || 'Car/Maintenance/CarTracking_Teana.xlsx';
-  const r = await gGet(`/me/drive/root:/${path}`);
-  state.fileId = r.id;
-  return r.id;
-}
-
-async function readTable(sheet, table) {
-  const id = await fileId();
-  try {
-    const r = await gGet(`/me/drive/items/${id}/workbook/worksheets/${sheet}/tables/${table}/rows`);
-    return (r.value || []).map(row => row.values[0]);
-  } catch { return []; }
-}
-
-async function appendRow(sheet, table, vals) {
-  const id = await fileId();
-  return gPost(`/me/drive/items/${id}/workbook/worksheets/${sheet}/tables/${table}/rows/add`,
-    { values: [vals] });
-}
-
-async function patchCell(sheet, addr, val) {
-  const id = await fileId();
-  return gPatch(`/me/drive/items/${id}/workbook/worksheets/${sheet}/range(address='${addr}')`,
-    { values: [[val]] });
+  const j = await r.json();
+  if (j.error) throw new Error(j.error);
+  return j;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -453,30 +303,41 @@ async function patchCell(sheet, addr, val) {
 // ═══════════════════════════════════════════════════════════════════════════
 async function syncAll() {
   setSyncState('syncing', 'Syncing…');
-  toast('Syncing with OneDrive…');
+  toast('Syncing with Google Sheets…');
   try {
-    // Fuel
-    const fRows = await readTable('FuelLog', 'FuelTable');
-    state.fuelLog = fRows.map(r => ({ date:r[0], km:+r[1], liters:+r[2], price:+r[3], ppl:+r[4] }))
-                         .filter(r => r.km > 0);
+    // FuelLog — skip header row [0]
+    const fData = await gsRead('FuelLog');
+    state.fuelLog = fData.slice(1)
+      .map(r => ({ date:r[0], km:+r[1], liters:+r[2], price:+r[3], ppl:+r[4] }))
+      .filter(r => r.km > 0);
 
-    // Maintenance
-    const mRows = await readTable('MaintenanceLog', 'MaintenanceTable');
-    state.maintLog = mRows.map(r => ({ date:r[0], km:+r[1], type:r[2], desc:r[3], cost:+r[4] }));
+    // MaintenanceLog
+    const mData = await gsRead('MaintenanceLog');
+    state.maintLog = mData.slice(1)
+      .map(r => ({ date:r[0], km:+r[1], type:r[2], desc:r[3], cost:+r[4] }));
 
-    // Repair
-    const rRows = await readTable('RepairLog', 'RepairTable');
-    state.repairLog = rRows.map(r => ({ date:r[0], km:+r[1], desc:r[2], cost:+r[3], shop:r[4] }));
+    // RepairLog
+    const rData = await gsRead('RepairLog');
+    state.repairLog = rData.slice(1)
+      .map(r => ({ date:r[0], km:+r[1], desc:r[2], cost:+r[3], shop:r[4] }));
 
-    // Intervals
-    const iRows = await readTable('ServiceIntervals', 'IntervalsTable');
-    state.intervals = iRows.map(r => ({ type:r[0], interval:+r[1], lastKM:+r[2], nextKM:+r[3] }));
+    // ServiceIntervals
+    const iData = await gsRead('ServiceIntervals');
+    // iData[0] = header, iData[1] = first data row = Google Sheets row 2
+    state.intervals = iData.slice(1).map((r, i) => ({
+      type:       r[0],
+      intervalKM: +r[1],
+      lastKM:     +r[2],
+      gsRow:      i + 2   // 1-based GS row (header=1, first data=2)
+    }));
 
-    // Current KM = max across all logs
-    const allKMs = [...state.fuelLog.map(r=>r.km),
-                    ...state.maintLog.map(r=>r.km),
-                    ...state.repairLog.map(r=>r.km)].filter(Boolean);
-    state.currentKM = allKMs.length ? Math.max(...allKMs) : 0;
+    // Current KM = highest across all logs
+    const allKM = [
+      ...state.fuelLog.map(r => r.km),
+      ...state.maintLog.map(r => r.km),
+      ...state.repairLog.map(r => r.km)
+    ].filter(Boolean);
+    state.currentKM = allKM.length ? Math.max(...allKM) : 0;
 
     state.lastSync = new Date();
     renderAll();
@@ -490,8 +351,8 @@ async function syncAll() {
 }
 
 function setSyncState(s, txt) {
-  const dot = document.getElementById('syncDot');
-  dot.className = 'dot' + (s === 'ok' ? ' ok' : s === 'err' ? ' err' : ' syncing');
+  const d = document.getElementById('syncDot');
+  d.className = 'dot' + (s==='ok' ? ' ok' : s==='err' ? ' err' : ' spin-dot');
   document.getElementById('syncTxt').textContent = txt;
 }
 
@@ -501,30 +362,29 @@ function setSyncState(s, txt) {
 function renderAll() {
   document.getElementById('kmPill').textContent =
     state.currentKM ? state.currentKM.toLocaleString() + ' km' : '— km';
-
-  renderServiceStatus();
+  renderSvcStatus();
   renderRecentFuel();
-  renderRecentService();
+  renderRecentSvc();
   renderIntervalsList();
-  rebuildServiceDropdown();
+  rebuildDropdown();
 }
 
-function renderServiceStatus() {
+function renderSvcStatus() {
   const el = document.getElementById('svcList');
   if (!state.intervals.length) {
     el.innerHTML = '<p style="font-size:13px;color:#9e9e9e;text-align:center;padding:12px">Sync to load service data</p>';
     return;
   }
   el.innerHTML = state.intervals.map(iv => {
-    const next = iv.lastKM + iv.interval;
+    const next = iv.lastKM + iv.intervalKM;
     const rem  = next - state.currentKM;
     let cls = 'ok', lbl = rem.toLocaleString() + ' km left';
-    if (rem <= 0)    { cls = 'due';  lbl = 'Overdue ' + Math.abs(rem).toLocaleString() + ' km'; }
-    else if (rem <= 1000) { cls = 'soon'; lbl = rem.toLocaleString() + ' km left'; }
+    if      (rem <= 0)    { cls = 'due';  lbl = 'Overdue ' + Math.abs(rem).toLocaleString() + ' km'; }
+    else if (rem <= 1000) { cls = 'soon'; }
     return `<div class="svc-item">
       <div>
         <div class="svc-name">${iv.type}</div>
-        <div class="svc-meta">Every ${iv.interval.toLocaleString()} km · Last: ${iv.lastKM.toLocaleString()} km</div>
+        <div class="svc-meta">Every ${iv.intervalKM.toLocaleString()} km · Last: ${iv.lastKM.toLocaleString()} km</div>
       </div>
       <span class="badge ${cls}">${lbl}</span>
     </div>`;
@@ -545,11 +405,11 @@ function renderRecentFuel() {
     : '<p style="font-size:13px;color:#9e9e9e;text-align:center;padding:12px">No fuel entries yet</p>';
 }
 
-function renderRecentService() {
-  const el = document.getElementById('recentService');
+function renderRecentSvc() {
+  const el = document.getElementById('recentSvc');
   const combined = [
-    ...state.maintLog.map(r => ({ ...r, label: r.type, sub: 'Maintenance' })),
-    ...state.repairLog.map(r => ({ ...r, label: r.desc, sub: 'Repair · ' + (r.shop || '') }))
+    ...state.maintLog.map(r => ({ km:r.km, date:r.date, label:r.type,  sub:'Maintenance',          cost:r.cost })),
+    ...state.repairLog.map(r => ({ km:r.km, date:r.date, label:r.desc,  sub:'Repair'+(r.shop?' · '+r.shop:''), cost:r.cost }))
   ].sort((a,b) => (b.km||0) - (a.km||0)).slice(0, 4);
   el.innerHTML = combined.length
     ? combined.map(s => `<div class="entry">
@@ -563,14 +423,15 @@ function renderRecentService() {
 }
 
 function renderIntervalsList() {
-  document.getElementById('intervalsList').innerHTML = state.intervals.map(iv =>
-    `<div class="setting-row">
-      <div class="setting-label">${iv.type}</div>
-      <div class="setting-desc">Every ${iv.interval.toLocaleString()} km · Last done: ${iv.lastKM.toLocaleString()} km</div>
-    </div>`).join('') || '<p style="font-size:13px;color:#9e9e9e">Sync to load…</p>';
+  document.getElementById('intervalsList').innerHTML =
+    state.intervals.map(iv => `
+      <div class="setting-row">
+        <div class="setting-label">${iv.type}</div>
+        <div class="setting-desc">Every ${iv.intervalKM.toLocaleString()} km · Last done: ${iv.lastKM.toLocaleString()} km</div>
+      </div>`).join('') || '<p style="font-size:13px;color:#9e9e9e">Sync to load…</p>';
 }
 
-function rebuildServiceDropdown() {
+function rebuildDropdown() {
   const sel = document.getElementById('mType');
   const cur = sel.value;
   sel.innerHTML = '<option value="">Select service…</option>';
@@ -592,18 +453,18 @@ function calcPPL() {
 }
 
 async function addFuel() {
-  const date  = document.getElementById('fDate').value;
-  const km    = parseFloat(document.getElementById('fKM').value);
-  const liters= parseFloat(document.getElementById('fLiters').value);
-  const price = parseFloat(document.getElementById('fPrice').value);
+  const date   = document.getElementById('fDate').value;
+  const km     = parseFloat(document.getElementById('fKM').value);
+  const liters = parseFloat(document.getElementById('fLiters').value);
+  const price  = parseFloat(document.getElementById('fPrice').value);
   if (!date||!km||!liters||!price) { toast('Please fill in all fields'); return; }
-  const ppl = price / liters;
+  const ppl = +(price / liters).toFixed(4);
   try {
     toast('Saving…');
-    await appendRow('FuelLog', 'FuelTable', [date, km, liters, price, +ppl.toFixed(4)]);
+    await gsAppend('FuelLog', [date, km, liters, price, ppl]);
     state.fuelLog.push({ date, km, liters, price, ppl });
     if (km > state.currentKM) state.currentKM = km;
-    clearFields(['fKM','fLiters','fPrice','fPPL']);
+    clearIds(['fKM','fLiters','fPrice','fPPL']);
     renderAll();
     toast('✅ Fuel entry saved!');
   } catch(e) { toast('❌ ' + e.message); }
@@ -618,20 +479,18 @@ async function addMaintenance() {
   if (!date||!km||!type) { toast('Please fill Date, KM and Service Type'); return; }
   try {
     toast('Saving…');
-    await appendRow('MaintenanceLog', 'MaintenanceTable', [date, km, type, desc, cost]);
+    await gsAppend('MaintenanceLog', [date, km, type, desc, cost]);
 
-    // Update LastServiceKM in ServiceIntervals sheet
-    const idx = state.intervals.findIndex(iv => iv.type === type);
-    if (idx >= 0) {
-      const row = idx + 2; // 1-based + header
-      await patchCell('ServiceIntervals', `C${row}`, km);
-      state.intervals[idx].lastKM = km;
-      state.intervals[idx].nextKM = km + state.intervals[idx].interval;
+    // Update LastServiceKM (col 3) in ServiceIntervals
+    const iv = state.intervals.find(i => i.type === type);
+    if (iv) {
+      await gsUpdateCell('ServiceIntervals', iv.gsRow, 3, km);
+      iv.lastKM = km;
     }
 
     state.maintLog.push({ date, km, type, desc, cost });
     if (km > state.currentKM) state.currentKM = km;
-    clearFields(['mKM','mDesc','mCost']);
+    clearIds(['mKM','mDesc','mCost']);
     document.getElementById('mType').value = '';
     renderAll();
     toast('✅ Maintenance saved!');
@@ -647,17 +506,17 @@ async function addRepair() {
   if (!date||!km||!desc) { toast('Please fill Date, KM and Description'); return; }
   try {
     toast('Saving…');
-    await appendRow('RepairLog', 'RepairTable', [date, km, desc, cost, shop]);
+    await gsAppend('RepairLog', [date, km, desc, cost, shop]);
     state.repairLog.push({ date, km, desc, cost, shop });
     if (km > state.currentKM) state.currentKM = km;
-    clearFields(['rKM','rDesc','rCost','rShop']);
+    clearIds(['rKM','rDesc','rCost','rShop']);
     renderAll();
     toast('✅ Repair saved!');
   } catch(e) { toast('❌ ' + e.message); }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-//  NAVIGATION & SCREENS
+//  NAVIGATION
 // ═══════════════════════════════════════════════════════════════════════════
 function goTab(name) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -665,46 +524,55 @@ function goTab(name) {
   document.getElementById('page' + name).classList.add('active');
   document.getElementById('nb-' + name).classList.add('active');
   const titles = { Dashboard:'Teana Tracker', Fuel:'Add Fuel', Maintenance:'Add Service', Repair:'Add Repair', Settings:'Settings' };
-  document.getElementById('hTitle').textContent = titles[name];
+  document.getElementById('hTitle').textContent = titles[name] || 'Teana Tracker';
 }
 
-function show(s) {
-  ['Login','Setup','Main'].forEach(id =>
-    document.getElementById('screen'+id).style.display = id === s ? (id==='Main'?'block':'flex') : 'none');
+// ═══════════════════════════════════════════════════════════════════════════
+//  SETUP
+// ═══════════════════════════════════════════════════════════════════════════
+function saveSetup() {
+  const url    = document.getElementById('setupUrl').value.trim();
+  const secret = document.getElementById('setupSecret').value.trim();
+  if (!url || !secret) { toast('Please enter both the URL and secret'); return; }
+  if (!url.includes('script.google.com')) { toast('URL should be from script.google.com'); return; }
+  cfg('scriptUrl', url);
+  cfg('secret', secret);
+  launchApp();
+}
+
+function reconnect() {
+  document.getElementById('screenMain').style.display = 'none';
+  document.getElementById('screenSetup').style.display = 'block';
 }
 
 function launchApp() {
-  show('Main');
-  const today = new Date().toISOString().split('T')[0];
-  ['fDate','mDate','rDate'].forEach(id => { const el = document.getElementById(id); if(el) el.value = today; });
-  document.getElementById('pathInput').value = cfg('filePath') || 'Car/Maintenance/CarTracking_Teana.xlsx';
-  if (account) {
-    document.getElementById('hSub').textContent     = 'Hi, ' + (account.name?.split(' ')[0] || 'there');
-    document.getElementById('settingName').textContent  = account.name || '—';
-    document.getElementById('settingEmail').textContent = account.username || '—';
-  }
-  syncAll();
-}
+  document.getElementById('screenSetup').style.display = 'none';
+  document.getElementById('screenMain').style.display = 'block';
 
-function savePath() {
-  const p = document.getElementById('pathInput').value.trim();
-  if (!p) return;
-  cfg('filePath', p);
-  state.fileId = null;
-  toast('Path saved');
+  const today = new Date().toISOString().split('T')[0];
+  ['fDate','mDate','rDate'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = today;
+  });
+
+  const url = cfg('scriptUrl');
+  document.getElementById('settingUrl').textContent = url
+    ? url.replace(/(.{40}).*/, '$1…') : '—';
+
+  syncAll();
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
 //  UTILS
 // ═══════════════════════════════════════════════════════════════════════════
-function clearFields(ids) {
+function clearIds(ids) {
   ids.forEach(id => { const el = document.getElementById(id); if(el) el.value = ''; });
 }
 
 function fmtDate(d) {
   if (!d) return '—';
   try { return new Date(d).toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'2-digit' }); }
-  catch { return d; }
+  catch { return String(d); }
 }
 
 function fmtTime(d) {
@@ -723,7 +591,13 @@ function toast(msg) {
 // ═══════════════════════════════════════════════════════════════════════════
 //  BOOT
 // ═══════════════════════════════════════════════════════════════════════════
-window.addEventListener('load', initApp);
+window.addEventListener('load', () => {
+  if (cfg('scriptUrl') && cfg('secret')) {
+    launchApp();
+  } else {
+    document.getElementById('screenSetup').style.display = 'block';
+  }
+});
 </script>
 </body>
 </html>
